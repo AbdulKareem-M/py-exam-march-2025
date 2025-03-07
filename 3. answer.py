@@ -23,36 +23,23 @@
  
  
 class Student:
-  def student_details(self,name, marks):
+  def details(self,name, marks):
     self.name = name
     self.marks = marks
-    students = {}
-    students[name] = marks
     
-  def calculate_average(self, average):
-    self.average = average
+  def calculate_average(self):
     self.average= sum(i for i in self.marks)/len(self.marks)
    
-  def get_grade(self, grade):
-    self.grade = grade
-    if self.average >=90:
-      self.grade = 'A'
-    elif 80<=grade<=89:
-      self.grade = 'B'
-    elif 70<=grade<=79:
-      self.grade = 'C'
+  def get_grade(self, average):
+    average = self.average
+    if average > 90:
+      return 'A'
+    elif 80<=average<=89:
+      return 'B'
+    elif 80<=average<=89:
+      return 'C'
     else:
-      self.grade = 'D'
-    
-  def details(self):
-    for i in self.students:
-      print(i, self.average, self.marks)
-      
-obj = Student()
-obj.student_details('Alice',[10,30,20])
-    
-      
-       
+      return 'D'
   
   
   
