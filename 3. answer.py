@@ -23,7 +23,7 @@
  
  
 class Student:
-  def details(self,name, marks):
+  def student_details(self,name, marks):
     self.name = name
     self.marks = marks
     students = {}
@@ -46,10 +46,10 @@ class Student:
     
   def details(self):
     for i in self.students:
-      print(i, self.get_grade(self.students[i]), self.get_grade())
+      print(i, self.average, self.marks)
       
 obj = Student()
-obj.details('Alice',[10,30,20])
+obj.student_details('Alice',[10,30,20])
     
       
        
